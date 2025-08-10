@@ -1,0 +1,379 @@
+/* Estilos del componente Favorites replicando favoritos.html */
+
+/* Contenedor principal */
+.container.favoritos {
+  min-height: 70vh;
+}
+
+/* Título */
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+  color: #333;
+  border-bottom: 2px solid #b38449;
+  padding-bottom: 0.5rem;
+}
+
+/* Filtros y ordenación */
+.form-control {
+  border: 1px solid #e8e8e8;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border-color: #b38449;
+  box-shadow: 0 0 0 0.2rem rgba(179, 132, 73, 0.25);
+}
+
+/* Cards de productos favoritos */
+.product-wap {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.product-wap:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.product-wap .card {
+  border: none;
+}
+
+.product-wap img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-wap img:hover {
+  transform: scale(1.05);
+}
+
+.product-wap .card-body {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.product-name {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: #333;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Botones de acción */
+.btn-lg {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  min-width: 50px;
+}
+
+.btn-success {
+  background-color: #b38449 !important;
+  border-color: #875d19 !important;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #875d19 !important;
+  border-color: #875d19 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(89, 171, 110, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Iconos en botones */
+.btn i {
+  font-size: 1.1rem;
+}
+
+/* Precio */
+.text-center.mx-2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b38449;
+  min-width: 80px;
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 3rem;
+}
+
+.page-link {
+  color: #b38449;
+  border-color: #dee2e6;
+  padding: 0.75rem 1rem;
+  margin: 0 2px;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #b38449;
+  border-color: #b38449;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.page-item.active .page-link {
+  background-color: #b38449;
+  border-color: #b38449;
+  color: #fff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #fff;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+}
+
+.border-pagination {
+  border: 1px solid #dee2e6 !important;
+}
+
+/* Alertas */
+.alert {
+  border-radius: 10px;
+  border: none;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+.alert h4 {
+  color: #0c5460;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.alert p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Modal */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+  display: block !important;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-body {
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+  border-color: #545b62;
+  transform: translateY(-2px);
+}
+
+/* Estados de carga */
+.text-center h4 {
+  color: #666;
+  font-weight: 300;
+  margin: 3rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .product-wap img {
+    height: 200px;
+  }
+  
+  .product-name {
+    font-size: 1rem !important;
+    min-height: 40px;
+  }
+  
+  .btn-lg {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .text-center.mx-2 {
+    font-size: 1rem;
+    min-width: 70px;
+  }
+  
+  .pagination {
+    justify-content: center !important;
+  }
+  
+  .h2 {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .d-flex.align-items-center.justify-content-center {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .d-flex.align-items-center.justify-content-center > * {
+    margin: 0 !important;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-wap {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Hover effects */
+a[role="button"]:hover {
+  text-decoration: none;
+}
+
+/* Focus states para accesibilidad */
+button:focus,
+a:focus {
+  outline: 2px solid #b38449;
+  outline-offset: 2px;
+}
+
+/* Estilos para enlaces */
+a.text-decoration-none:hover {
+  text-decoration: underline !important;
+}
+
+/* Grid spacing */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+} 

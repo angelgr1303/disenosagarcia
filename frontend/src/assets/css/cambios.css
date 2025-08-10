@@ -1,0 +1,344 @@
+/*
+Custom Css
+*/
+
+.list-unstyled{padding-left:0;list-style:none}
+
+.templatemo-accordion a{color:#000}
+
+.btn,.mr-3,.btn-success{
+
+    background-color:#b38449 !important;
+    border-color:#875d1984 !important;
+}
+.pagination .page-item:first-child .page-link:hover,
+.pagination .page-item:nth-child(2) .page-link:hover,
+.pagination .page-item:nth-child(3) .page-link:hover,.pagination-container{
+    background-color: #b38449;
+    border-color: #875d19;
+    border-radius: 8px;
+
+}
+
+.text-decoration-none:hover,
+.nav-link:hover,
+.dropdown-item:hover,
+.dropdown-menu:hover,
+.dropdown-menu-end:hover,
+.pb-3-footer,
+.link,
+.fa-cart-arrow-down:hover,
+.fa-heart:hover,
+.fa-user:hover,
+.fa-search:hover{
+    color:#b38449 !important;
+
+}
+
+.nav-link.hoverPestañas:hover{
+   background-color: #875d19!important;
+}
+
+.btn.btn-primary:hover{
+    background-color: #875d19!important;
+}
+.nav-active{
+    color:#b38449!important;
+}
+
+.bg-success{
+    background-color:#b38449!important;
+}
+.bg-footer,.bg-navbar{
+    background-color: #000!important;
+}
+
+.precio, .product-price{
+    color: #b38449 !important;
+}
+
+.link-shop-single:hover{
+    color: black !important;
+}
+
+.page-item.active,.page-link:hover{
+    background-color: #b38449;
+    
+}
+
+/*
+Login
+*/
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+.login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+}
+.login-card img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+.login-card h2 {
+    color: #875d19;
+    margin-bottom: 1rem;
+}
+.form-control {
+    border-color: #b38449;
+}
+.form-control:focus {
+    border-color: #875d19;
+    box-shadow: none;
+}
+.btn-primary {
+    background-color: #b38449;
+    border-color: #875d19;
+}
+.btn-primary:hover {
+    background-color: #875d19;
+}
+.login-card .register-link {
+    color: #b38449;
+}
+.login-card .register-link:hover {
+    color: #875d19;
+}
+
+.logo{
+    min-width: 150px;
+
+}
+
+.fa-eye,.fa-eye-slash{
+    color:#875d19;
+}
+
+/*
+Registro
+*/
+.register-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .register-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+        }
+        .register-card img {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+        .register-card h2 {
+            color: #875d19;
+            margin-bottom: 1rem;
+        }
+        .form-control {
+            border-color: #b38449;
+        }
+        .form-control:focus {
+            border-color: #875d19;
+            box-shadow: none;
+        }
+        .btn-primary {
+            background-color: #b38449;
+            border-color: #875d19;
+        }
+        .btn-primary:hover {
+            background-color: #875d19;
+        }
+        .register-card .login-link {
+            color: #b38449;
+        }
+        .register-card .login-link:hover {
+            color: #875d19;
+        }
+
+        /* Carousel */
+
+        /* Aumentar el tamaño de las flechas de navegación */
+        #related-products-carousel .carousel-control-prev, 
+        #related-products-carousel .carousel-control-next {
+            font-size: 2rem; /* Aumenta el tamaño de las flechas */
+            opacity: 1; /* Asegura que las flechas sean siempre visibles */
+            transition: opacity 0.2s; /* Suaviza la transición al pasar el ratón */
+        }
+
+        /* Iconos de las flechas (ajusta el tamaño y el color)   i para que solo afecte a esas clases que estén en un elemento "i"*/
+        #related-products-carousel .carousel-control-prev i, 
+        #related-products-carousel .carousel-control-next i {
+            font-size: 2.5rem; 
+            color: #b38449; 
+        }
+
+        /* Evita que las flechas desaparezcan al quitar el ratón */
+        #related-products-carousel .carousel-control-prev i:hover, 
+        #related-products-carousel .carousel-control-next i:hover {
+            opacity: 1;
+            color: #875d19 !important;
+        }
+
+        /* Ajuste de posición para que las flechas estén un poco más centradas */
+        #related-products-carousel .carousel-control-prev {
+            left: -3rem; /* Ajusta según sea necesario */
+        }
+
+        #related-products-carousel .carousel-control-next {
+            right: -3rem; /* Ajusta según sea necesario */
+        }
+
+        /*Carrito*/
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container-carrito {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: flex;
+        }
+        .carrito-section {
+            flex: 3;
+            margin-right: 20px;
+        }
+        .resumen-section {
+            flex: 1;
+            position: sticky;
+            top: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .btn.btn-success:hover{
+            border-color:#875d19;
+            border-width:2.5px !important;
+            background-color: #875d19 !important;
+        }
+
+
+        .btn.btn-danger:hover{
+            border-color:#875d19;
+            border-width:2.5px !important;
+            background-color: #875d19 !important;
+        }
+
+        /**Perfil**/
+        .profile-header {
+            background-color: #00000017;
+            color: #b38449;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .profile-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .nav-tabs {
+            justify-content: center;
+            border-bottom: 2px solid #b38449;
+        }
+
+        .nav-tabs .nav-link {
+            color: #b38449;
+            font-weight: bold;
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #fff;
+            background-color: #b38449;
+            border-radius: 5px;
+        }
+
+        .tab-content {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-color: #b38449;
+        }
+
+        .form-control:focus {
+            border-color: #875d19;
+            box-shadow: none;
+        }
+
+        .btn {
+            background-color: #b38449;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #875d19;
+        }
+
+        .order-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-card h6 {
+            font-weight: bold;
+            color: #b38449;
+        }
+
+        .order-card p {
+            margin: 0;
+        }
+
+        /**Index.html*/
+
+        .align-right{
+
+            margin-right: 50px;
+        }
+
+        .categoriaActiva{
+            color: #b38449 !important;
+        }
+
+
+        /*Cambios quitar contacto*/
+        .nav-item{
+            padding: 0px 60px 0px 0px;
+
+        }
+
+        .nav-item-izq{
+            padding: 0px 0px 0px 40px;
+        }
+
+        .nav-item-centro{
+            padding: 0px 30px 0px 30px;
+        }

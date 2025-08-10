@@ -1,0 +1,187 @@
+<!-- Header con Material Design -->
+<mat-toolbar color="primary" class="top-navbar">
+  <div class="container">
+    <div class="contact-info">
+      <mat-icon>email</mat-icon>
+      <a href="mailto:clientes&#64;disenyosagarcia.com">clientes&#64;disenyosagarcia.com</a>
+      <mat-icon>phone</mat-icon>
+      <a href="tel:+34693465202">693465202</a>
+    </div>
+    <div class="social-links">
+      <a href="https://fb.com" target="_blank"><mat-icon>facebook</mat-icon></a>
+      <a href="https://www.instagram.com/" target="_blank"><mat-icon>camera_alt</mat-icon></a>
+      <a href="https://twitter.com/" target="_blank"><mat-icon>twitter</mat-icon></a>
+      <a href="https://www.linkedin.com/" target="_blank"><mat-icon>linkedin</mat-icon></a>
+    </div>
+  </div>
+</mat-toolbar>
+
+<!-- Main Navigation -->
+<mat-toolbar class="main-navbar">
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <img src="assets/img/vertical-logo.png" alt="Diseños A.García" width="150" height="150">
+    </a>
+
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+      <a routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
+      <a routerLink="/shop" routerLinkActive="active">Tienda</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Search -->
+      <button mat-icon-button (click)="openSearchDialog()">
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <!-- Favorites -->
+      <button mat-icon-button routerLink="/favorites" [matBadge]="favoritesCount" matBadgeColor="warn">
+        <mat-icon>favorite</mat-icon>
+      </button>
+
+      <!-- Cart -->
+      <button mat-icon-button routerLink="/cart" [matBadge]="cartCount" matBadgeColor="accent">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+
+      <!-- User Menu -->
+      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="/profile">Mi perfil</button>
+        <button mat-menu-item *ngIf="!isAuthenticated" routerLink="/login">Iniciar sesión</button>
+        <button mat-menu-item *ngIf="isAuthenticated" (click)="logout()">Cerrar sesión</button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>
+
+<!-- Main Content -->
+<div class="shop-container">
+  <div class="container">
+    <!-- Filters Section -->
+    <div class="filters-section">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Filtros y Ordenación</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="filters-grid">
+            <!-- Category Filter -->
+            <mat-form-field appearance="outline">
+              <mat-label>Categoría</mat-label>
+              <mat-select [(ngModel)]="selectedCategory" (selectionChange)="filterByCategory($event.value)">
+                <mat-option value="">Todas las categorías</mat-option>
+                <mat-option *ngFor="let category of categories" [value]="category">
+                  {{category}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <!-- Order Filter -->
+            <mat-form-field appearance="outline">
+              <mat-label>Ordenar por</mat-label>
+              <mat-select [(ngModel)]="selectedOrder" (selectionChange)="orderBy($event.value)">
+                <mat-option value="">Sin ordenar</mat-option>
+                <mat-option value="nombre">Nombre</mat-option>
+                <mat-option value="precioMenor">Precio: Menor a Mayor</mat-option>
+                <mat-option value="precioMayor">Precio: Mayor a Menor</mat-option>
+                <mat-option value="cantidad_vendidos">Más Vendidos</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <!-- Search -->
+            <mat-form-field appearance="outline">
+              <mat-label>Buscar productos</mat-label>
+              <input matInput [(ngModel)]="searchQuery" (keyup.enter)="searchProducts()" placeholder="Buscar...">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+
+            <!-- Clear Filters -->
+            <button mat-raised-button color="warn" (click)="clearFilters()">
+              <mat-icon>clear</mat-icon>
+              Limpiar filtros
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-section">
+      <!-- Loading State -->
+      <div *ngIf="loading" class="loading-container">
+        <mat-spinner></mat-spinner>
+        <p>Cargando productos...</p>
+      </div>
+
+      <!-- Error State -->
+      <div *ngIf="error" class="error-container">
+        <mat-card color="warn">
+          <mat-card-content>
+            <mat-icon>error</mat-icon>
+            <p>{{error}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Products Grid -->
+      <div *ngIf="!loading && !error" class="products-grid">
+        <mat-card *ngFor="let product of filteredProducts" class="product-card">
+          <img mat-card-image [src]="product.image" [alt]="product.name" class="product-image">
+          <mat-card-content>
+            <mat-card-title>{{product.name}}</mat-card-title>
+            <mat-card-subtitle>{{product.category}} - {{product.subcategory}}</mat-card-subtitle>
+            <p class="price">{{product.price | currency:'EUR':'symbol':'1.2-2'}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" [routerLink]="['/product', product.id]">
+              <mat-icon>visibility</mat-icon>
+              Ver detalles
+            </button>
+            <button mat-button color="accent" (click)="addToCart(product)" [disabled]="!isAuthenticated">
+              <mat-icon>add_shopping_cart</mat-icon>
+              Añadir al carrito
+            </button>
+            <button mat-button color="warn" (click)="addToFavorites(product)" [disabled]="!isAuthenticated">
+              <mat-icon>favorite_border</mat-icon>
+              Favoritos
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+      <!-- No Products Found -->
+      <div *ngIf="!loading && !error && filteredProducts.length === 0" class="no-products">
+        <mat-card>
+          <mat-card-content>
+            <mat-icon>search_off</mat-icon>
+            <h3>No se encontraron productos</h3>
+            <p>Intenta ajustar los filtros de búsqueda</p>
+            <button mat-raised-button color="primary" (click)="clearFilters()">
+              Limpiar filtros
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Search Dialog -->
+<mat-dialog-content #searchDialog>
+  <h2 mat-dialog-title>Buscar Productos</h2>
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Buscar diseños...</mat-label>
+    <input matInput [(ngModel)]="searchQuery" (keyup.enter)="searchProducts()">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="primary" (click)="searchProducts()">
+      Buscar
+    </button>
+  </div>
+</mat-dialog-content> 

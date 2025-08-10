@@ -1,0 +1,198 @@
+/* About Component Styles - Replicando about.html */
+
+/* Banner principal */
+.bg-success {
+  background-color: #b38449 !important;
+}
+
+.bg-success h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.bg-success p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Sección de contenido */
+.container .row {
+  align-items: center;
+}
+
+.texto2 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* Imágenes */
+.img-fluid {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+}
+
+/* GIF animado */
+.col-md-4 img[alt*="marmolista"] {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de diseño */
+.col-md-4 img[alt*="diseño"] {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Espaciado */
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bg-success h1 {
+    font-size: 36px !important;
+    text-align: center;
+  }
+  
+  .bg-success p {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  
+  .texto2 p {
+    font-size: 16px !important;
+    text-align: left;
+  }
+  
+  .col-md-4, .col-md-8 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-success h1 {
+    font-size: 28px !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bg-success p, .texto2 p {
+    font-size: 15px !important;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Animaciones suaves */
+.row {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para el texto destacado */
+.bg-success .col-md-8 {
+  position: relative;
+}
+
+.bg-success .col-md-8::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .bg-success .col-md-8::before {
+    display: none;
+  }
+}
+
+/* Hover effects */
+.col-md-4:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Texto con mejor legibilidad */
+.texto2 {
+  position: relative;
+  padding: 1rem;
+}
+
+.texto2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #b38449, #875d19);
+  border-radius: 2px;
+}
+
+/* Sombras y profundidad */
+.bg-success {
+  background: linear-gradient(135deg, #b38449 0%, #875d19 100%) !important;
+  position: relative;
+}
+
+.bg-success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="1"/></g></svg>');
+  opacity: 0.3;
+}
+
+.bg-success .container {
+  position: relative;
+  z-index: 1;
+} 

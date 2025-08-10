@@ -1,0 +1,326 @@
+/*
+Custom Css
+*/
+
+.list-unstyled{padding-left:0;list-style:none}
+
+.templatemo-accordion a{color:#000}
+
+.btn,.mr-3,.btn-success{
+
+    background-color:#b38449 !important;
+    border-color:#875d1984 !important;
+}
+.pagination .page-item:first-child .page-link:hover,
+.pagination .page-item:nth-child(2) .page-link:hover,
+.pagination .page-item:nth-child(3) .page-link:hover,.pagination-container{
+    background-color: #b38449;
+    border-color: #875d19;
+    border-radius: 8px;
+
+}
+
+.text-decoration-none:hover,.nav-link:hover,.dropdown-item:hover,.dropdown-menu:hover,.dropdown-menu-end:hover,.pb-3-footer,.link,.fa-cart-arrow-down:hover,.fa-heart:hover,.fa-user:hover,.fa-search:hover{
+    color:#b38449 !important;
+
+}
+
+.nav-active{
+    color:#b38449!important;
+}
+
+.bg-success{
+    background-color:#b38449!important;
+}
+.bg-footer,.bg-navbar{
+    background-color: #000!important;
+}
+
+.precio, .product-price{
+    color: #b38449 !important;
+}
+
+.link-shop-single:hover{
+    color: black !important;
+}
+
+.page-item.active,.page-link:hover{
+    background-color: #b38449;
+    
+}
+
+.letra{color:#875d19;}
+
+
+        
+        
+
+        /**Index.html*/
+
+        .align-right{
+
+            margin-left: 250px;
+        }
+      
+        .carousel-indicators{
+            color:#b38449;
+        }
+/* Estilo para las flechas del banner hero */
+#template-mo-zay-hero-carousel .carousel-control-prev,
+#template-mo-zay-hero-carousel .carousel-control-next {
+    font-size: 2rem; /* Tamaño del contenedor de las flechas */
+    opacity: 1; /* Asegura que las flechas sean siempre visibles */
+    transition: opacity 0.2s ease-in-out; /* Suaviza la transición al pasar el ratón */
+}
+
+#template-mo-zay-hero-carousel .carousel-control-prev i,
+#template-mo-zay-hero-carousel .carousel-control-next i {
+    font-size: 2.5rem; /* Tamaño de las flechas */
+    color: #b38449 !important; /* Color principal de las flechas */
+}
+
+#template-mo-zay-hero-carousel .carousel-control-prev i:hover,
+#template-mo-zay-hero-carousel .carousel-control-next i:hover {
+    color: #875d19 !important;/* Color al pasar el ratón */
+}
+
+#template-mo-zay-hero-carousel .carousel-control-prev {
+    left: 1rem; /* Ajusta la posición horizontal de la flecha izquierda */
+}
+
+#template-mo-zay-hero-carousel .carousel-control-next {
+    right: 1rem; /* Ajusta la posición horizontal de la flecha derecha */
+}
+
+/* Estilo para los indicadores del carrusel */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+    background-color: #b38449; /* Color de las barras inactivas */
+    width: 15px; /* Ajusta el tamaño de las barras */
+    height: 15px; /* Hace que las barras sean circulares */
+    border: none; /* Elimina cualquier borde predeterminado */
+    transition: background-color 0.3s ease-in-out; /* Transición al cambiar de estado */
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators .active {
+    background-color: #875d19; /* Color de la barra activa */
+    width: 20px; /* Hace que la barra activa sea más grande */
+    height: 20px; /* Ajusta el tamaño para que resalte */
+}
+
+
+/* Botón Empieza ahora */
+.custom-button {
+    background-color: #b38449; /* Fondo marrón */
+    color: #ffffff !important;  /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la letra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease-in-out; /* Transición suave al cambiar el fondo */
+}
+
+.custom-button:hover {
+    background-color: #875d19; /* Fondo marrón más oscuro al pasar el ratón */
+}
+
+
+.collage-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos */
+  }
+  
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .collage-item:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+  }
+  
+  .collage-item:hover {
+    transform: scale(1.05); /* Agranda ligeramente el fragmento */
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+
+.btn:hover{
+    background-color: #875d19 !important;
+
+}
+
+.img-hover:hover{
+    border-width:5px !important;
+    border-color: #b38449!important;
+}
+
+.mano:hover{
+    cursor: pointer !important;;
+}
+
+
+/**Modal búsqueda*/
+/* Estilo para el modal */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Cuando el modal está abierto */
+.custom-modal.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenido del modal */
+.custom-modal-content {
+    width: 100%;
+    height: 60%;
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabecera del modal */
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #b38449;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.custom-modal-header h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.custom-modal-header .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Cuerpo del modal */
+.custom-modal-body {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* 🔹 Difuminado en la mitad inferior */
+.custom-modal::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Cuando el modal está abierto, se activa el difuminado */
+.custom-modal.open::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 🔹 Estilos para los resultados de búsqueda */
+.search-results {
+    margin-top: 10px;
+}
+
+/* 🔹 Diseño de los productos dentro del modal */
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-decoration: none;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.search-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Imagen del producto */
+.search-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Contenedor de texto */
+.search-item div {
+    flex: 1;
+}
+
+/* Nombre del producto */
+.search-item span {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Precio del producto */
+.search-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+#inputModalSearch{
+    border-radius: 5px;
+    border:none;
+    justify-content: space-between;
+   
+}
+
+#buttonModalSearch{
+    border-radius: 5px;
+    border:none;
+    justify-content: space-between;
+}

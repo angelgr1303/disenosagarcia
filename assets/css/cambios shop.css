@@ -1,0 +1,295 @@
+/*
+Custom Css
+*/
+
+.list-unstyled{padding-left:0;list-style:none}
+
+.templatemo-accordion a{color:#000}
+
+.btn,.mr-3,.btn-success{
+
+    background-color:#b38449 !important;
+    border-color:#875d1984 !important;
+}
+.pagination .page-item:first-child .page-link:hover,
+.pagination .page-item:nth-child(2) .page-link:hover,
+.pagination .page-item:nth-child(3) .page-link:hover,.pagination-container{
+    background-color: #b38449;
+    border-color: #875d19;
+    border-radius: 8px;
+
+}
+
+.text-decoration-none:hover,
+.fa-heart-header:hover,
+.nav-link:hover,
+.dropdown-item:hover,
+.dropdown-menu:hover,
+.dropdown-menu-end:hover,
+.pb-3-footer,.link,
+.fa-cart-arrow-down:hover,
+.fa-user:hover,
+.fa-search:hover{
+    color:#b38449 !important;
+
+}
+
+.nav-active{
+    color:#b38449!important;
+}
+
+.bg-success{
+    background-color:#b38449!important;
+}
+.bg-footer,.bg-navbar{
+    background-color: #000!important;
+}
+
+.precio, .product-price{
+    color: #b38449 !important;
+}
+
+.link-shop-single:hover{
+    color: black !important;
+}
+
+.page-link:hover{
+    background-color: #b38449;
+    border-color:#875d19;
+    border-width:1.5px !important;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-success.btn-lg:hover{
+    border-color:#875d19;
+    border-width:2.5px !important;
+    background-color: #875d19 !important;
+
+}
+
+
+
+.page-item.active .page-link{
+    z-index:3;
+    color:#fff;
+    background-color:#b38449;
+    border-color:#875d19;
+}
+
+/**Modal*/
+/* Estilo para el modal */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Cuando el modal está abierto */
+.custom-modal.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenido del modal */
+.custom-modal-content {
+    width: 100%;
+    height: 60%;
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabecera del modal */
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #b38449;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.custom-modal-header h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.custom-modal-header .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Cuerpo del modal */
+.custom-modal-body {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* 🔹 Difuminado en la mitad inferior */
+.custom-modal::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Cuando el modal está abierto, se activa el difuminado */
+.custom-modal.open::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 🔹 Estilos para los resultados de búsqueda */
+.search-results {
+    margin-top: 10px;
+}
+
+/* 🔹 Diseño de los productos dentro del modal */
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-decoration: none;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.search-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Imagen del producto */
+.search-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Contenedor de texto */
+.search-item div {
+    flex: 1;
+}
+
+/* Nombre del producto */
+.search-item span {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Precio del producto */
+.search-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+#inputModalSearch{
+    border-radius: 5px;
+    border:none;
+    justify-content: space-between;
+    border-color: #b38449;
+   
+}
+
+#buttonModalSearch{
+    border-radius: 5px;
+    border:none;
+    justify-content: space-between;
+}
+
+.fa-trash,.fa-cart-plus{
+    color: white !important;
+}
+
+/**Tarjetas productos*/
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+}
+
+.product-name {
+    font-size: 1.1rem;
+    line-height: 1.2em; /* Controla el espaciado entre líneas */
+    height: 2.4em; /* 2 veces la altura de una línea de texto para permitir 2 líneas */
+    overflow: hidden; /* Evita que el texto se desborde */
+    text-overflow: ellipsis; /* Muestra los puntos suspensivos si el texto es demasiado largo */
+    white-space: normal; /* Permite que el texto se divida en varias líneas */
+}
+
+.card-img {
+    max-height: 300px; /* Si necesitas controlar la altura de las imágenes también */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
+/**Fin tarjetas prodcutos*/
+
+
+/**Filtros*/
+#sort-options{
+    cursor:pointer;
+}
+.form-control:focus{border-color: white ;}
+#sort-options:hover{
+    border-width: 3px;
+    border-color: #b38449;
+}
+
+.option:hover, .option:focus{
+    background-color: #b38449;
+    cursor: pointer !important;
+}
+
+/*Cambios quitar contacto*/
+.nav-item{
+    padding: 0px 60px 0px 0px;
+
+}
+
+.nav-item-izq{
+    padding: 0px 0px 0px 40px;
+}
+
+.nav-item-centro{
+    padding: 0px 30px 0px 30px;
+}
+
+.categoriaActiva{
+    color: #b38449 !important;
+}

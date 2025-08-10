@@ -1,0 +1,152 @@
+/* Estilos específicos del componente Home replicando index.html */
+
+/* Carrusel Hero */
+#template-mo-zay-hero-carousel {
+  background: #efefef !important;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #b38449;
+}
+
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #b38449 !important;
+  font-size: 2.8em !important;
+}
+
+/* Collage interactivo */
+.collage-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+}
+
+.collage-item:hover {
+  transform: scale(1.05);
+}
+
+.collage-item img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Botón personalizado */
+.custom-button {
+  background-color: #b38449;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #875d19;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Tipografía exacta del original */
+.letra {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400 !important;
+}
+
+.h1.letra {
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+
+.h2 {
+  font-size: 30px !important;
+  font-weight: 300 !important;
+}
+
+/* Categorías */
+.img-hover {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.img-hover:hover {
+  transform: scale(1.1);
+}
+
+.link {
+  color: #b38449;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #875d19;
+  text-decoration: underline;
+}
+
+/* Cards de productos */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* Botones de éxito */
+.btn-success {
+  background-color: #b38449 !important;
+  border-color: #875d19 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #875d19 !important;
+  border-color: #875d19 !important;
+  transform: translateY(-2px);
+}
+
+/* Sección de fondo claro */
+.bg-light {
+  background-color: #e9eef5 !important;
+}
+
+/* Responsive para collage */
+@media (max-width: 768px) {
+  .collage-container {
+    flex-direction: column;
+  }
+  
+  .collage-item {
+    min-width: 100%;
+  }
+}
+
+/* Enlaces de carrusel */
+a[role="button"] {
+  outline: none;
+} 

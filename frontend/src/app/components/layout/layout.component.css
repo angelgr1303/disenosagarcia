@@ -1,0 +1,402 @@
+/* Estilos del Layout replicando el diseño original */
+
+/* Header / Navigation */
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+}
+
+.navbar-brand img {
+  max-height: 80px;
+  width: auto;
+}
+
+.logo {
+  font-weight: 500 !important;
+}
+
+.nav-link {
+  color: #212934 !important;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #b38449 !important;
+}
+
+.nav-link.nav-active {
+  color: #b38449 !important;
+  font-weight: 500;
+}
+
+.nav-icon {
+  color: #212934;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #b38449;
+}
+
+.nav-icon .badge {
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0;
+  background-color: #b38449 !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.dropdown-item {
+  color: #333;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #b38449;
+}
+
+/* Modal de búsqueda personalizado */
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.custom-modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.custom-modal.open .custom-modal-content {
+  transform: scale(1);
+}
+
+.custom-modal-header {
+  background: linear-gradient(135deg, #b38449 0%, #875d19 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-bar button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-modal-header h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.custom-modal-body {
+  padding: 1.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.search-item:hover {
+  border-color: #b38449;
+  box-shadow: 0 4px 15px rgba(179, 132, 73, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.search-item div {
+  flex: 1;
+}
+
+.search-item span {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.search-item p {
+  margin: 0;
+  color: #b38449;
+  font-weight: 600;
+}
+
+/* Footer */
+.bg-footer {
+  background-color: #212934 !important;
+  padding: 2rem 0 1rem 0;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link-list li {
+  padding-top: 10px;
+  color: #dcdde1;
+}
+
+.footer-link-list a {
+  color: #dcdde1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link-list a:hover {
+  color: #b38449;
+}
+
+.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+  transition: background-color 0.3s ease;
+}
+
+.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: 0.5s;
+}
+
+.pb-3-footer {
+  padding-bottom: 1rem !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .nav-icon {
+    margin: 0 15px;
+  }
+  
+  .custom-modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .search-item {
+    padding: 0.75rem;
+  }
+  
+  .search-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 60px;
+  }
+  
+  .custom-modal-header {
+    padding: 1rem;
+  }
+  
+  .custom-modal-body {
+    padding: 1rem;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+  
+  .footer-link-list {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Scroll personalizado para modal */
+.custom-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Estados de loading */
+.text-muted {
+  color: #6c757d !important;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* Focus states para accesibilidad */
+.nav-link:focus,
+.nav-icon:focus,
+.search-bar input:focus,
+.search-bar button:focus,
+.search-item:focus {
+  outline: 2px solid #b38449;
+  outline-offset: 2px;
+}
+
+/* Hover effects adicionales */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid #b38449;
+} 

@@ -1,0 +1,46 @@
+.carousel-inner .carousel-item{
+        margin-bottom: 30px;
+}
+
+.btn.btn-primary{
+    background-color:#b38449;
+
+}
+.btn.btn-primary:hover, .btn.btn-success.btn-lg:hover{
+    background-color:#875d19!important;
+    border-width:2.5px !important;
+
+}
+
+.img-fluid{
+    max-height: 500px;
+}
+
+
+/**Tarjetas productos*/
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+}
+
+.product-name {
+    font-size: 1.1rem;
+    line-height: 1.2em; /* Controla el espaciado entre líneas */
+    height: 2.4em; /* 2 veces la altura de una línea de texto para permitir 2 líneas */
+    overflow: hidden; /* Evita que el texto se desborde */
+    text-overflow: ellipsis; /* Muestra los puntos suspensivos si el texto es demasiado largo */
+    white-space: normal; /* Permite que el texto se divida en varias líneas */
+}
+
+.card-img {
+    max-height: 300px; /* Si necesitas controlar la altura de las imágenes también */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
+/**Fin tarjetas prodcutos*/
+
+

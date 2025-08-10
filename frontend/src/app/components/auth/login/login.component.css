@@ -1,0 +1,328 @@
+/* Login Component Styles - Replicando login.html */
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+    padding: 2rem 1rem;
+}
+
+/* Tarjeta de login */
+.login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Logo */
+.login-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Título */
+.login-card h2 {
+    color: #875d19;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.login-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #b38449, #875d19);
+    border-radius: 2px;
+}
+
+/* Formulario */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-control:focus {
+    border-color: #b38449;
+    box-shadow: 0 0 0 0.2rem rgba(179, 132, 73, 0.25);
+    background-color: white;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    font-weight: 300;
+}
+
+/* Campo de contraseña con icono */
+.position-relative .fa {
+    color: #6c757d;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.position-relative .fa:hover {
+    color: #b38449;
+}
+
+/* Botón principal */
+.btn-success, .btn-primary {
+    background: linear-gradient(135deg, #b38449 0%, #875d19 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-success:hover, .btn-primary:hover {
+    background: linear-gradient(135deg, #875d19 0%, #6b4914 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(179, 132, 73, 0.4);
+}
+
+.btn-success:active, .btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-success:disabled, .btn-primary:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Enlaces */
+.register-link {
+    color: #b38449;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.register-link:hover {
+    color: #875d19;
+    text-decoration: none;
+}
+
+.register-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #b38449, #875d19);
+    transition: width 0.3s ease;
+}
+
+.register-link:hover::after {
+    width: 100%;
+}
+
+/* Texto adicional */
+.login-card p {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    animation: slideDown 0.3s ease;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Modales */
+.modal-header {
+    border-bottom: 2px solid #b38449;
+    background: linear-gradient(135deg, #b38449 0%, #875d19 100%);
+    color: white;
+}
+
+.modal-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.modal-body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.modal-footer .btn-primary {
+    background: linear-gradient(135deg, #b38449 0%, #875d19 100%);
+    border: none;
+}
+
+/* Animaciones */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.login-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    
+    .login-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .login-card img {
+        width: 100px;
+    }
+    
+    .login-card h2 {
+        font-size: 24px;
+    }
+    
+    .form-control {
+        font-size: 16px; /* Para prevenir zoom en iOS */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .login-card h2 {
+        font-size: 22px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .login-card img {
+        width: 80px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estados de focus mejorados para accesibilidad */
+.form-control:focus,
+.btn:focus,
+.register-link:focus {
+    outline: 2px solid #b38449;
+    outline-offset: 2px;
+}
+
+/* Mejoras visuales adicionales */
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #b38449, #875d19);
+    border-radius: 12px 12px 0 0;
+}
+
+/* Efectos de hover suaves */
+.mb-3 {
+    transition: transform 0.2s ease;
+}
+
+.form-control:focus + .mb-3 {
+    transform: translateY(-2px);
+} 

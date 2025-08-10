@@ -1,0 +1,309 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap');
+
+/* Template Original Styles - Diseños A.García */
+
+/* Typography del template original */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px !important;
+}
+
+/* Colores del template original */
+.logo { 
+  font-weight: 500 !important;
+}
+
+.text-warning {  
+  color: #ede861 !important;
+}
+
+.text-muted { 
+  color: #bcbcbc !important;
+}
+
+.text-success { 
+  color: #b38449 !important;
+}
+
+.text-light { 
+  color: #cfd6e1 !important;
+}
+
+.bg-dark { 
+  background-color: #212934 !important;
+}
+
+.bg-light { 
+  background-color: #e9eef5 !important;
+}
+
+.bg-black { 
+  background-color: #1d242d !important;
+}
+
+.bg-success { 
+  background-color: #b38449 !important;
+}
+
+.btn-success {
+  background-color: #b38449 !important;
+  border-color: #875d19 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #875d19 !important;
+  border-color: #875d19 !important;
+  transform: translateY(-2px);
+}
+
+/* Navigation del template original */
+#templatemo_nav_top { 
+  min-height: 40px;
+}
+
+#templatemo_nav_top * { 
+  font-size: .9em !important;
+}
+
+#templatemo_main_nav a { 
+  color: #212934;
+}
+
+#templatemo_main_nav a:hover { 
+  color: #b38449;
+}
+
+#templatemo_main_nav .navbar .nav-icon { 
+  margin-right: 20px;
+}
+
+/* Hero Carousel del template original */
+#template-mo-zay-hero-carousel { 
+  background: #efefef !important;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #b38449;
+}
+
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #b38449 !important;
+  font-size: 2.8em !important;
+}
+
+/* Accordion */
+.templatemo-accordion a { 
+  color: #000;
+}
+
+.templatemo-accordion a:hover { 
+  color: #333d4a;
+}
+
+/* Shop */
+.shop-top-menu a:hover { 
+  color: #b38449 !important;
+}
+
+/* Product */
+.product-wap { 
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card.product-wap .card .product-overlay {
+  background: rgba(0,0,0,.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.card.product-wap:hover .card .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card.product-wap a { 
+  color: #000;
+}
+
+/* Brand */
+.brand-img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.brand-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Services */
+.services-icon-wap {
+  transition: .3s;
+}
+
+.services-icon-wap:hover, .services-icon-wap:hover i {
+  color: #fff;
+}
+
+.services-icon-wap:hover {
+  background: #b38449;
+}
+
+/* Footer */
+#tempaltemo_footer a { 
+  color: #dcdde1;
+}
+
+#tempaltemo_footer a:hover { 
+  color: #b38449;
+}
+
+#tempaltemo_footer ul.footer-link-list li { 
+  padding-top: 10px;
+}
+
+#tempaltemo_footer ul.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+}
+
+#tempaltemo_footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s;
+}
+
+/* Paginación del template original */
+.pagination .page-link:hover {
+  color: #000;
+}
+
+.pagination .page-link:hover, .pagination .page-link.active {
+  background-color: #b38449;
+  color: #fff;
+}
+
+/* Form control */
+.form-control { 
+  border: 1px solid #e8e8e8;
+}
+
+.form-control:focus {
+  border-color: #b38449;
+  box-shadow: 0 0 0 0.2rem rgba(179, 132, 73, 0.25);
+}
+
+/* Responsive del template original */
+@media (min-width: 576px) {
+  .pb-3-footer {
+    padding-bottom: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .border-top-sm {
+    border-top: 1px solid #dee2e6 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .border-start-lg {
+    border-left: 1px solid #dee2e6 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .border-start-xl {
+    border-left: 1px solid #dee2e6 !important;
+  }
+}
+
+/* Estilos adicionales específicos para Angular */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.img-hover {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.img-hover:hover {
+  transform: scale(1.05);
+}
+
+.letra {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.custom-button {
+  background-color: #b38449;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #875d19;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Override Angular Material warnings */
+.mat-mdc-button {
+  --mdc-filled-button-container-color: #b38449;
+  --mdc-filled-button-label-text-color: white;
+}
+
+/* Global link styles */
+a {
+  color: #b38449;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #875d19;
+  text-decoration: underline;
+}
+
+/* Bootstrap spacing utilities mantenidas */
+.me-2 { margin-right: 0.5rem !important; }
+.me-3 { margin-right: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; } 
