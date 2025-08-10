@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:8080/api' // Temporalmente localhost para pruebas
+  apiUrl: 'https://disenosagarcia.com/api' // URL del dominio personalizado
 };
